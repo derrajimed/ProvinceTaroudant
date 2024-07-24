@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Reclamation;
+use  Illuminate\Support\Facades\DB;
 
 class ReclamationController extends Controller
 {
@@ -21,6 +22,7 @@ class ReclamationController extends Controller
             'time' => 'required',
             'reclamation' => 'required|string|unique:reclamations,reclamation'
         ]);
+    
         
         
         Reclamation::create([
@@ -35,6 +37,10 @@ class ReclamationController extends Controller
         ]);
         
         return view('acceuil',['iduser' => $idus]); 
+    }
+    public function reclamations(){
+      $reclamations =DB::table("reclamations")->get(); 
+      return view('reclamation',['reclamations' => $reclamations ]);
     }
 }
 ?>

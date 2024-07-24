@@ -90,7 +90,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link active">accueil</a>
-                <a href="about.html" class="nav-item nav-link">Réclamations</a>
+                <a href="/reclamation" class="nav-item nav-link">Réclamations</a>
                
             </div>
             <a href="#reclamer" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Réclamer<i class="fa fa-arrow-right ms-3"></i></a>
